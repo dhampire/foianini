@@ -16,7 +16,7 @@
 </div>
 
 <div class="row">
-    <div id="contenedor">
+    <div class="col-xs-12 col-md-12 contenedor-noticias">
             <?php $the_query = new WP_Query( 'posts_per_page=3' ); ?>`
             <?php while ($the_query -> have_posts()) : $the_query -> the_post(); ?>
 

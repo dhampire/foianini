@@ -9,35 +9,35 @@
 <div class="blog-cabecera">
 	<img src="<?php echo get_template_directory_uri(); ?>/img/blog.png" alt="">
 </div>
-<div id="contenedor">
-	<div class="contenido-blog izquierda">
-	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+<div class="row">
+	<div class="col-xs-12 col-md-10 col-md-offset-1" id="contenedor">
+		<div class="col-xs-12 col-md-9">
+			<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
-		<article class="blog" id="post-<?php the_ID(); ?>">
-			
-			<h2 class="entry-title"><?php the_title(); ?></h2>
+				<article class="blog" id="post-<?php the_ID(); ?>">
+					
+					<h2 class="entry-title"><?php the_title(); ?></h2>
 
-			<div class="entry-content">
-				
-				<?php the_content(); ?>
+					<div class="entry-content">
+						
+						<?php the_content(); ?>
 
-				<?php wp_link_pages(array('before' => __('Pages: ','html5reset'), 'next_or_number' => 'number')); ?>
+						<?php wp_link_pages(array('before' => __('Pages: ','html5reset'), 'next_or_number' => 'number')); ?>
 
-			<div class="post-footer">	
-					<?php the_category(__('Categoria: ','Foianini'), '&gt;  ', '');?> | 
-					<?php the_tags( __('Tags: ','html5reset'), ', ', ''); ?> | 
-					<?php posted_on(); ?>
-			</div>
-			</div>
-			
-			<?php edit_post_link(__('Edit this entry','html5reset'),'','.'); ?>
-			
-		</article>
+					<div class="post-footer">	
+							<?php posted_on(); ?>
+					</div>
+					</div>
+					
+					<?php edit_post_link(__('Edit this entry','html5reset'),'','.'); ?>
+					
+				</article>
 
-	<?php endwhile; endif; ?>
+			<?php endwhile; endif; ?>
 
 <?php post_navigation(); ?>
 </div>	
 <?php get_sidebar(); ?>
+</div>
 </div>
 <?php get_footer(); ?>

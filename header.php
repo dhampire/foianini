@@ -80,11 +80,11 @@
 		<div class="col-xs-12 col-sm-12 col-lg-3">
 			<header class="header" role="banner">
 				<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
-						<img src="<?php echo get_template_directory_uri(); ?>/img/logo-azul.png"></a>
+						<img src="<?php echo get_template_directory_uri(); ?>/img/logo-foianini.jpg"></a>
 				</a>
 		</div>
 		<div class="col-xs-12 col-sm-12 col-lg-6 vcenter">
-			<div class="col-xs-12 col-sm-6 col-lg-6">
+			<div class="col-xs-6 col-sm-6 col-lg-5">
 				<div class="col-xs-12 telefono">
 					<div class="col-xs-12 col-sm-3 col-lg-3">
 						<a href="tel:+591-3-3362211"><span class="icon-telefono"></span></a>
@@ -98,14 +98,16 @@
 					</div>
 				</div>
 			</div>
-			<div class="col-xs-12 col-sm-6 col-lg-6">
+			<div class="col-xs-6 col-sm-6 col-lg-7">
 				<div class="col-xs-12 direccion">
 					<div class="col-xs-12 col-sm-3 col-lg-2">
 						<a href="#"><span class="icon-pin"></span></a>
 					</div>
-					<div class="col-xs-12 col-sm-9 col-lg-10 textto">
-						<a href="#">
-							<span class="texto"><strong>Ingreso principal: </strong>Calle Chuquisaca #737<br><strong>Emergencias:</strong> Av. Irala # 468<br> Santa Cruz  - Bolivia</span>
+					<div class="col-xs-12 col-sm-9 col-lg-10 direccion-texto">
+						<a href="https://goo.gl/maps/7MXmJnAmm4s" target="_blank">
+							<span><strong>Ingreso principal: </strong>Calle Chuquisaca #737<br><strong>Emergencias:</strong> Av. Irala # 468</span><br>
+							Santa Cruz - Bolivia
+
 					
 						</a>
 					</div>
@@ -115,11 +117,14 @@
 		</div>
 		<div class="col-xs-12 col-sm-12 col-lg-3 vcenter">
 				<div class="social">
-					<a href="http://jlarteaga.com/foianini/blog"><img src="<?php echo get_template_directory_uri(); ?>/img/social-blog.png" alt=""></a>
-					<a href="#"><span class="icon-facebook"></span></a>
+					<a href="http://jlarteaga.com/foianini/blog"><span class="icon-blog"></span></a>
+					<a href="https://www.facebook.com/clinicafoianini/"><span class="icon-facebook"></span></a>
 					<a href="#"><span class="icon-youtube"></span></a>
 					<a href="http://jlarteaga.com/foianini/contacto"><span class="icon-mail"></span></a>
-					<a href="#"><span class="icon-buscar"></span></a>
+						<form id="search" role="search" method="get" action="<?php echo home_url( '/' ); ?>">
+					        <div id="label"><label for="s" id="search-label">Buscar</label></div>
+					        <div id="input"><input type="text" name="s" id="search-terms" placeholder="Buscar..."></div>
+						</form>
 				</div>
 		</div>
 		</header>

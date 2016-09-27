@@ -8,8 +8,8 @@
 
 	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 			
-		<article class="post" id="post-<?php the_ID(); ?>">
-			<div class="entry">
+		<article class="row post" id="post-<?php the_ID(); ?>">
+			<div class="col-lg-12 col-xs-12 entry">
 
 				<?php the_content(); ?>
 

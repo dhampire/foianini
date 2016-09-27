@@ -5,7 +5,7 @@
  * @since HTML5 Reset 2.0
  */
 ?>
- <aside id="sidebar" class="derecha">
+ <aside class="col-xs-12 col-md-3 sidebar">
 
     <?php if (function_exists('dynamic_sidebar') && dynamic_sidebar('Sidebar Widgets')) : else : ?>
     
