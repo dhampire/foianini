@@ -89,25 +89,35 @@ img {
     font-size: 14px;
     padding: 2% 0;
 }
-
+#footer .footer-social {
+    margin: 20px 0;
+}
 #contacto a{
     display: block;
     color: #0096D3;
     list-style: none;
 }
 .vcenter {
-    padding-top: 40px;
+    padding-top: 50px;
+}
+.padding {
+    padding: 0;
 }
 .direccion {cursor: pointer; padding: 0 }
 
 .telefono {
     border-right: 1px solid gray;
-    padding: 0;
+    padding-left: 30px;
 }
-.telefono a > .icon-telefono:before, .direccion a >.icon-pin:before {
+.icon-telefono:before {
     color: #84CB70;
-    font-size: 32px;
+    font-size: 24px;
+    float: left;
+    padding: 20px 10px 0 0;
 }
+.icon-pin:before {color: #84CB70;
+    font-size: 24px;
+    }
 .telefono a, .direccion a{
     color: #0A5289;
     text-decoration: none;
@@ -116,16 +126,19 @@ img {
     font-family: 'Roboto', sans-serif;
     text-align: left;
 }
-#numero .grande {
+.grande {
     display: block;
-    font-size: 32px;
+    font-size: 24px;
     font-weight: bold;
     line-height: .6em;
     padding-top: 5px;
 }
 /* cabecera */
 .header {
-    padding: 1% 3%;
+    padding: 5% 3%;
+}
+.header img {
+    max-width: 250px;
 }
 .social a{
     color: #5C95CD;
@@ -133,7 +146,6 @@ img {
     font-size: 24px;
     height: 36px;
     line-height: 32x;
-    margin: 0 2%;
     padding: 3px;
     position: relative;
     text-align: center;
@@ -147,14 +159,13 @@ img {
          -o-transition: all .25s;
             transition: all .25s;
 }
-.social a:hover, .social a:active, .social a:focus {
-    background: #5C95CD;
-    border-radius: 50%;
-    color: white;
+.social a > .icon-pin {
+    color: #84CB70;
 }
-.social a > .icon-blog:hover{
-    background: url(img/icon-blog-hover.png) no-repeat;
+.social a:nth-child(3), .social a:nth-child(5), .social a:nth-child(6) {
+    font-size: 20px;
 }
+
 #buscador {
     float: left;
     text-align: right;
@@ -236,6 +247,7 @@ img {
 #primary-menu > li > a {
     color: white;
     display: block;
+    font-size: 14px;
     padding: 0 5%;
     line-height: 1em;
     text-decoration: none;
@@ -270,6 +282,8 @@ img {
 }
 #ong a{
     text-decoration: none;
+    font-weight: bold;
+    border-bottom: 2px solid;
 }
 
 /* index - Muestra */
@@ -289,7 +303,7 @@ img {
     width: 25%
 }
 .semblanza {
-    background: #5C95CD;
+    background: rgba(92, 149, 205, 0.6) none repeat scroll 0 0;
     color: white;
     padding: 3%;
         }
@@ -325,9 +339,9 @@ height: 150px;
 }
 .videoInstitucional {
     position: relative;
-    padding-bottom: 56.25%; /* 16:9 */
+    /*padding-bottom: 56.25%; /* 16:9 */
     padding-top: 25px;
-    height: 0;
+    height: 350px;
 }
 
 .videoInstitucional iframe {
@@ -416,11 +430,12 @@ height: 150px;
     margin-left: auto;
 }
 .direccion-texto {
-    font-size: 13px;
+    font-size: 12px;
+    padding: 0;
 }
 /* clases index de noticias - */
 .noticias {
-
+    vertical-align: top;
 }
 .noticias > .titulo {
     background: #0097d6 none repeat scroll 0 0;
@@ -484,11 +499,17 @@ height: 150px;
 }
 .blog-cabecera {
     background: #EEF4D9;
-    padding: 2% 5%;
+    padding: 1% 5%;
     text-align: right;
     margin-bottom: 1%;
 }
-
+.blog-cabecera img {
+    max-width: 150px;
+}
+.emcabezado .texto-intro {
+    font-size: 14px;
+    font-style: italic;
+}
 .noticias:nth-child(2) {    margin: 0 2%;}
 .noticias:nth-child(3) {    margin: 0;}
 .noticias img{
@@ -574,10 +595,10 @@ height: 150px;
 }
 .calidad {
     background: url('img/calidad.png') no-repeat 100% center / cover ;
-    min-height: 200px;
+    min-height: 250px;
 }
 .texto {
-    padding: 5%;
+    padding: 8% 6% 0;
 }
 .especialidades {
     background: url('img/especialidades.png') no-repeat 100% center / cover ;
@@ -589,11 +610,11 @@ height: 150px;
 }
 .informacion-imagen {
     background: url('img/informacion.jpg') no-repeat 100% center / cover ;
-    min-height: 300px;
+    min-height: 200px;
 }
 .consultorios {
     background: url('img/consultorios.jpg') no-repeat 100% center / cover ;
-    min-height: 200px;
+    min-height: 250px;
 }
 .recursohumano{
     border: 1px solid #5C95CD;
@@ -602,9 +623,16 @@ height: 150px;
     padding: 0 3%;
 
 }
+.gerencia {
+    font-size: 14px;
+}
 .contacto {
     margin:30px auto;
     width: 60%;
+}
+.directores {
+    font-size: 14px;
+    line-height: 1.3em;
 }
 .directores a {
     color: white;
@@ -612,11 +640,11 @@ height: 150px;
 }
 .directores h2 {
     color: white !important;
-    font-weight: 300;
-    line-height: 1em ;
+    font-size: 16px;
+    font-weight: bold;
 }
 .servicios {
-    padding: 0;
+    padding: 20px 0;
     float: right;
 }
 .servicios a {
@@ -726,14 +754,13 @@ height: 150px;
 }
 .responsive-tabs .responsive-tabs__panel {
     border: none !important;
-    padding: 20px 0;
+    padding: 0 !important;
 }
 .slide-descripcion {
     background: rgba(120, 190, 68, .6);
     color: white;
     left: 0;
-    min-height: 120px;
-    padding:3% 3%;
+    padding:2%;
     position: absolute;
     bottom: 10%;
     width: 40%;
@@ -741,11 +768,13 @@ height: 150px;
 .slide-descripcion h2 {
     color: white;
     margin:0;
-    font-size: 24px;
+    font-size: 18px;
     font-weight: 300;
     line-height: 1em;
 }
 .meteor-slides p {
+    padding: 10px;
+    margin: 0;
 }
 .meteor-nav .prev a {
     background: url('img/prev.png') no-repeat center right !important;
@@ -760,8 +789,6 @@ height: 150px;
     padding: 20px 0;
 }
 
-
-
 #acordion section, #acordion .pointer, #acordion h1, #acordion p {
   -webkit-transition: all 0.25s ease-in-out;
   -moz-transition: all 0.25s ease-in-out;
@@ -773,7 +800,7 @@ height: 150px;
 }
 #acordion h3 {
   line-height:1.2;
-  font-size:18px;
+  font-size:14px;
   margin:0;
   padding: 5px 0 10px;
 }
@@ -850,20 +877,21 @@ input[type="submit"]{
 #search {
     display: inline-block;
     position: relative;
-    width: 32px;
-    height: 32px;
+    width: 24px;
+    height: 24px;
     vertical-align: top;
 }
 #label {
-    width: 32px;
-    height: 32px;
+    width: 24px;
+    height: 24px;
+    margin-top: 5px;
     position: relative;
     z-index: 20;
 }
 #label label {
     display: block;
-    width: 32px;
-    height: 32px;
+    width: 24px;
+    height: 24px;
     background: url("img/search.png") 0 0;
     font-size: 0;
     color: rgba(0, 0, 0, 0);
@@ -871,10 +899,10 @@ input[type="submit"]{
     cursor: pointer;
 }
 #label label:hover {
-    background: url("img/search.png") -32px 0
+    background: url("img/search.png") -24px 0
 }
 #label.active label {
-    background: url("img/search.png") -32px 0
+    background: url("img/search.png") -24px 0
 }
 #input {
     position: absolute;
@@ -1012,7 +1040,7 @@ a.close:hover {
 .aligncenter,
 div.aligncenter {
     display: block;
-    margin: 5px auto 5px auto;
+    margin: 0 auto;
 }
 
 .alignright {
@@ -1115,11 +1143,23 @@ a img.aligncenter {
         margin-top: 70px;
     }
     .contenedor-noticias {
-    	padding: 20px 100px;
+    	padding: 20px 10px;
     }
     .noticias {    	width: 31%    }
        #logo {
         margin-top: 40px;
+        text-align: center;
+        width: 100%;
+    }
+    .vcenter {padding-top: 20px}
+    #numero {
+        text-align: center;
+        display: block;
+        margin: 0 auto;
+        width: 180px
+    }
+    .icon-telefono::before {
+        display: block;
         text-align: center;
         width: 100%;
     }
@@ -1134,9 +1174,7 @@ a img.aligncenter {
      }
      .direccion {
         text-align: center;
-     }
-     .direccion-texto {
-        text-align: left;
+        margin: 20px 0;
      }
     .informacion {
         height: 300px;
@@ -1301,6 +1339,9 @@ a img.aligncenter {
     .slide-descripcion h2{
         font-size: 16px;
     }
+    .noticias:nth-child(3) {
+        display: none;
+    }
     #contacto {
         width: 100%;
     }
@@ -1323,7 +1364,7 @@ a img.aligncenter {
         padding-left: 2%;   
         width:  47%;
     }
-    #telefono a > .icon-telefono::before, #direccion a > .icon-pin::before {
+    #telefono a > .icon-telefono::before {
         display: block;
         text-align: center;
     }
@@ -1349,6 +1390,7 @@ a img.aligncenter {
         margin: 30px 0;
         text-align: center;
         width: 100%;
+        overflow: hidden;
     }
     .noticias {
         width: 45%;
@@ -1482,7 +1524,7 @@ a img.aligncenter {
 
 }
 
-.blog-cabecera img {    width: 100px;}
+.blog-cabecera img {    max-width: 100px;}
 .contenido-blog {width: 100%}
 }
 @media screen and (max-width: 736px) {
@@ -1492,11 +1534,14 @@ a img.aligncenter {
 
 }
 @media screen and (max-width: 480px) {
+    #footer > .telefono > #numero {
+        display: none;
+    }
     .noticias:nth-child(1) {
         margin-left: 0;
     }
 	.contenedor-noticias { padding: 20px  50px}
-    #numero, .direccion-texto {display: none}
+    .numero-chico, .grande {display: none}
     .vigencia {display: none}
     .descripcion {
         width: 100%;
@@ -1504,11 +1549,13 @@ a img.aligncenter {
     .vcenter {
         padding-top: 20px;
         text-align: center;
+        overflow: hidden;
     }
     .noticias {width: 100%;}
     .noticias:nth-child(2) {margin:0;}
-    .telefono a > .icon-telefono::before, .direccion a > .icon-pin::before {
+    .icon-telefono::before {
         font-size: 50px;
+        width: 100%;
     }
 }
 

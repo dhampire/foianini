@@ -7,26 +7,23 @@
 ?>
 <footer id="footer" class="col-xs-12 col-lg-12 source-org vcard copyright" role="contentinfo">
     <div class="col-xs-12 col-sm-12 col-lg-6">
-      <div class="col-xs-6 col-sm-6 col-lg-5">
+      <!--div class="col-xs-12 col-sm-6 col-lg-5">
         <div class="col-xs-12 telefono">
-          <div class="col-xs-12 col-sm-3 col-lg-3">
-            <a href="tel:+591-3-3362211"><span class="icon-telefono"></span></a>
-          </div>
-          <div class="col-xs-12 col-sm-6 col-lg-9">
+          <a href="tel:3-3362211">
             <span id="numero">
-            <a href="tel:+591-3-3362211">
-              +591(3)<br /><span class="grande">336 2211<span>
-            </a>
+            <span class="icon-telefono"></span>
+              <span class="numero-chico">+591(3)</span><br /><span class="grande">336 2211<span>
             </span>
-          </div>
+          </a>
+
         </div>
-      </div>
-      <div class="col-xs-6 col-sm-6 col-lg-7">
+      </div -->
+      <div class="col-xs-12 col-sm-6 col-lg-7">
         <div class="col-xs-12 direccion">
-          <div class="col-xs-12 col-sm-3 col-lg-2">
-            <a href="#"><span class="icon-pin"></span></a>
+          <div class="col-xs-12 col-lg-2">
+            <a href="https://goo.gl/maps/7MXmJnAmm4s"><span class="icon-pin"></span></a>
           </div>
-          <div class="col-xs-12 col-sm-9 col-lg-10 direccion-texto">
+          <div class="col-xs-12 col-lg-10 direccion-texto">
             <a href="https://goo.gl/maps/7MXmJnAmm4s" target="_blank">
               <span><strong>Ingreso principal: </strong>Calle Chuquisaca #737<br><strong>Emergencias:</strong> Av. Irala # 468</span><br>
               Santa Cruz - Bolivia
@@ -36,7 +33,7 @@
         </div>  
       </div>
     </div>
-    <div class="col-xs-12 col-sm-12 col-lg-3">
+    <div class="col-xs-12 col-sm-12 col-lg-3 footer-social">
         <div class="social">
           <a href="http://jlarteaga.com/foianini/blog"><span class="icon-blog"></span></a>
           <a href="https://www.facebook.com/clinicafoianini/"><span class="icon-facebook"></span></a>

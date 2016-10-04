@@ -15,7 +15,12 @@
 			<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
 				<article class="blog" id="post-<?php the_ID(); ?>">
-					
+					<?php the_post_thumbnail(''); ?>
+					<div class="emcabezado">
+    					<p><strong><?php echo get_post_meta($post->ID, 'Subtitulo', true); ?> </strong></p>
+    					<p class="texto-intro"><?php echo get_post_meta($post->ID, 'Resumen', true)?></p>
+					</div>
+
 					<h2 class="entry-title"><?php the_title(); ?></h2>
 
 					<div class="entry-content">
