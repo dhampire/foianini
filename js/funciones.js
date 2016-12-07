@@ -1,4 +1,5 @@
 ( function( $ ) {
+
 	$(document).ready(function(){
 		$('.completo').addClass('hide')
 		.before('<a class="read-more-show" href="#">(Leer más...)</a>')
@@ -16,17 +17,15 @@
 		});
 	});
 
-$(document).ready(function() {
-  $("#acordion section h3").click(function(e) {
-    $(this).parents().siblings("section").addClass("ac_hidden");
-    $(this).parents("section").removeClass("ac_hidden");
+	$(document).ready(function() {
+	  $("#acordion section h3").click(function(e) {
+	    $(this).parents().siblings("section").addClass("ac_hidden");
+	    $(this).parents("section").removeClass("ac_hidden");
 
-    e.preventDefault();
-  });
-});
-
-
-		function initMobileMenu() {
+	    e.preventDefault();
+	  });
+	});
+	function initMobileMenu() {
 		$('#primary-menu .menu-item-has-children').prepend('<span class="sub-trigger"></span>');
 
 		$( '.mobile-trigger' ).click( function() {
@@ -41,40 +40,55 @@ $(document).ready(function() {
 	$( document ).ready( function() {
 		initMobileMenu();
 	});
-
-
-
-$(function(){
-
-var appendthis =  ("<div class='modal-overlay js-modal-close'></div>");
-
-	$('a[data-modal-id]').click(function(e) {
-		e.preventDefault();
-    $("body").append(appendthis);
-    $(".modal-overlay").fadeTo(500, 0.7);
-    //$(".js-modalbox").fadeIn(500);
-		var modalBox = $(this).attr('data-modal-id');
-		$('#'+modalBox).fadeIn($(this).data());
-	});  
-  
-  
-$(".js-modal-close, .modal-overlay").click(function() {
-    $(".modal-box, .modal-overlay").fadeOut(500, function() {
-        $(".modal-overlay").remove();
-    });
  
-});
- 
-$(window).resize(function() {
-    $(".modal-box").css({
-        top: ($(window).height() - $(".modal-box").outerHeight()) / 2,
-        left: ($(window).width() - $(".modal-box").outerWidth()) / 2
-    });
-});
- 
-$(window).resize();
- 
-});
+ // Scroll Icon 
+
+	$(document).ready(function(){
+		$('.clinica__icon').hide(0); 
+			$(window).scroll(function() {
+				var windowHeight = $(window).scrollTop();
+				var main = $('.main').offset();
+
+					main = main.top;
+
+					if (windowHeight >= main) {
+						$('.clinica__icon').fadeIn(500);
+					} else {
+						$('.clinica__icon').fadeOut(500);
+					}
+			});
+	});
+
+	$(function(){
+
+	var appendthis =  ("<div class='modal-overlay js-modal-close'></div>");
+
+		$('a[data-modal-id]').click(function(e) {
+			e.preventDefault();
+	    $("body").append(appendthis);
+	    $(".modal-overlay").fadeTo(500, 0.7);
+	    //$(".js-modalbox").fadeIn(500);
+			var modalBox = $(this).attr('data-modal-id');
+			$('#'+modalBox).fadeIn($(this).data());
+		});  
+	  
+	  
+	$(".js-modal-close, .modal-overlay").click(function() {
+	    $(".modal-box, .modal-overlay").fadeOut(500, function() {
+	        $(".modal-overlay").remove();
+	    });
+	 
+	});
+	 
+	$(window).resize(function() {
+	    $(".modal-box").css({
+	        top: ($(window).height() - $(".modal-box").outerHeight()) / 2,
+	        left: ($(window).width() - $(".modal-box").outerWidth()) / 2
+	    });
+	});
+	 
+	$(window).resize();
+	 
+	});
+
 })( jQuery );
-
-

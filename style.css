@@ -4,7 +4,7 @@ Theme URI: http://clinicafoianini.com
 Description: Clinica Foianini
 Author: Jorge Luis Arteaga
 Author URI: http://jlarteaga.com
-Version: 2.2.1
+Version: 2.3.1
 */
 
 /* Ok, Esto será divertido
@@ -89,9 +89,12 @@ img {
     font-size: 14px;
     padding: 2% 0;
 }
-#footer .footer-social {
-    margin: 20px 0;
+.logos__ {
+    text-align:right
 }
+    .logos__img{
+        margin: 0 10px;
+    }
 #contacto a{
     display: block;
     color: #0096D3;
@@ -105,40 +108,57 @@ img {
 }
 .direccion {cursor: pointer; padding: 0 }
 
-.telefono {
-    border-right: 1px solid gray;
-    padding-left: 30px;
+.address {
+    display: inline-block;
+    width: 100%;
 }
 .icon-telefono:before {
     color: #84CB70;
     font-size: 24px;
     float: left;
-    padding: 20px 10px 0 0;
+    padding: 10px 10px 0 0;
 }
 .icon-pin:before {color: #84CB70;
     font-size: 24px;
     }
-.telefono a, .direccion a{
+.address a, .direccion a{
     color: #0A5289;
     text-decoration: none;
 }
-#numero {
+.numero {
+    display: block;
+}
+.numero-chico {
+    color: #5C95CD;
     font-family: 'Roboto', sans-serif;
     text-align: left;
+    font-size: 1rem;
 }
 .grande {
+    color: #5C95CD;
     display: block;
-    font-size: 24px;
+    font-size: 18px;
     font-weight: bold;
-    line-height: .6em;
+    line-height: .5em;
     padding-top: 5px;
 }
 /* cabecera */
+.top__cabecera {
+    margin-top: 40px;
+}
 .header {
     padding: 5% 3%;
 }
 .header img {
     max-width: 250px;
+}
+.telefono {
+    float: left;
+    line-height: 0.1em;
+    width: 130px;
+    }
+.social {
+    float: left;
 }
 .social a{
     color: #5C95CD;
@@ -146,7 +166,6 @@ img {
     font-size: 24px;
     height: 36px;
     line-height: 32x;
-    padding: 3px;
     position: relative;
     text-align: center;
     text-decoration: none;
@@ -162,10 +181,10 @@ img {
 .social a > .icon-pin {
     color: #84CB70;
 }
-.social a:nth-child(3), .social a:nth-child(5), .social a:nth-child(6) {
-    font-size: 20px;
+.social a:nth-child(2) {
+    padding-right: 40px;
+    border-right: solid 1px #5C95CD;
 }
-
 #buscador {
     float: left;
     text-align: right;
@@ -197,8 +216,10 @@ img {
 .site-navigation {
     background: #5C95CD;
     width: 100%;
-    position: relative;
+    position: fixed;
+    top: 0;
     height: 50px;
+    z-index:999;
 }
 .site-navigatio ul {
     padding: 0;
@@ -214,10 +235,21 @@ img {
 
 #primary-menu { 
     margin: 0;
-    float: right;
-    padding: 0 5%;
+    float: left;
+    padding: 0 0  0 5%;
     text-align: right;
-    width: 100%;
+    width: 90%;
+}
+.clinica__icon{
+    top: 0;
+    left: 50px;
+    position:fixed;
+}
+.icon__blog{
+    float: right;
+    margin-top: 10px;
+    padding-right:5%;
+
 }
 #primary-menu li, #primary-menu .current-menu-item {
     border-bottom: 0px solid #0A5289;
@@ -336,6 +368,9 @@ height: 150px;
     }
 .sidebar li {
     margin: 10px 0;
+}
+.sidebar ol {
+    padding: 0;
 }
 .videoInstitucional {
     position: relative;
@@ -528,6 +563,7 @@ height: 150px;
 }
 .leer-mas, .more-link{
     background: #7BB649;
+    border-radius:5px;
     color: white;
     display: block;
     float: right;
@@ -541,6 +577,11 @@ height: 150px;
          -o-transition: all .5s;
             transition: all .5s;
 }
+.leer-mas:hover, .more-link:hover{
+    background: #5C95CD;
+    color: white;
+}
+
 .more-link {
     padding: 1% 20px;
 }
@@ -711,7 +752,10 @@ height: 150px;
 }
 .post-footer {
     background: #FCB040;
+    border-radius: 5px;
     font-size: 12px;
+    clear: both;
+    padding: 5px 10px;
     overflow: hidden;
 }
 .post-footer a {
@@ -1137,6 +1181,22 @@ a img.aligncenter {
 	width: auto;
 	z-index: 100000; /* Above WP toolbar. */
 }
+/* Events Calendar*/
+.tribe-events-schedule h2 {
+    color: inherit !important;
+    font-size:16px !important;
+    margin: 0;
+    text-transform: capitalize !important;
+}
+#tribe-events-content .tribe-events-abbr {
+    text-transform: capitalize;
+}
+.tribe-event-date-end, .tribe-event-date-star {
+    font-size: .8rem;
+    color: #c1c1c1;
+    text-transform: capitalize;
+}
+
 @media screen and (max-width: 1024px) {
     .header {
         text-align: center;
@@ -1152,7 +1212,7 @@ a img.aligncenter {
         width: 100%;
     }
     .vcenter {padding-top: 20px}
-    #numero {
+    .numero {
         text-align: center;
         display: block;
         margin: 0 auto;
@@ -1169,9 +1229,7 @@ a img.aligncenter {
     #calidad {
         height: auto;
     }
-    .telefono {
-        text-align: center;
-     }
+
      .direccion {
         text-align: center;
         margin: 20px 0;
@@ -1331,6 +1389,9 @@ a img.aligncenter {
     }
 }
 @media screen and (max-width: 768px) {
+    .clinica__icon{
+    left: 60px;
+    }
 	.slide-descripcion {
         bottom: 0;
         min-height: auto;
@@ -1349,10 +1410,10 @@ a img.aligncenter {
         padding-right: 3%;
         width: 47%;
     }
-    #numero {
+    .numero {
         width: 100%;
     }
-    #numero .grande {
+    .numero .grande {
         font-size: 20px;
         margin-left: 10px;
         text-align: center;
@@ -1534,7 +1595,7 @@ a img.aligncenter {
 
 }
 @media screen and (max-width: 480px) {
-    #footer > .telefono > #numero {
+    #footer > .telefono > .numero {
         display: none;
     }
     .noticias:nth-child(1) {

@@ -15,6 +15,7 @@
 		register_nav_menu( 'footer', __( 'Footer', 'foianini' ) );
 		add_theme_support( 'post-thumbnails' );
 		add_image_size( 'inicio', 380, 180, true );
+		add_image_size( 'blog-thumb', 800, 280, true );
 	}
 	add_action( 'after_setup_theme', 'html5reset_setup' );
 

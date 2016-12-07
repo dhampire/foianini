@@ -14,7 +14,7 @@
 		<div class="col-xs-12 col-md-9">
 			<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 				<article class="blog" id="post-<?php the_ID(); ?>">
-					<?php the_post_thumbnail(''); ?>
+					<?php the_post_thumbnail('blog-thumb'); ?>
 					<div class="emcabezado">
     					<p><strong><?php echo get_post_meta($post->ID, 'Subtitulo', true); ?> </strong></p>
     					<p class="texto-intro"><?php echo get_post_meta($post->ID, 'Resumen', true)?></p>
