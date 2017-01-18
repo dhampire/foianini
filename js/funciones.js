@@ -1,30 +1,25 @@
 ( function( $ ) {
 
 	$(document).ready(function(){
-		$('.completo').addClass('hide')
-		.before('<a class="read-more-show" href="#">(Leer más...)</a>')
-		.append(' <a class="read-more-hide" href="#">(Leer menos...)</a>');
-		// Set up the toggle effect:
-		$('.read-more-show').on('click', function(e) {
-		  $(this).next('.completo').removeClass('hide');
-		  $(this).addClass('hide');
-		  e.preventDefault();
+		$('span.completo').addClass('hide')
+		.before('<a class="read-more-show" href="#">(Ver más...)</a>')
+		.append(' <a class="read-more-hide" href="#">(Ver menos...)</a>');
+
+		$('.read-more-show').on('click', function(e){
+			$(this).next('span.completo').removeClass('hide');
+			$(this).addClass('hide');
+			return false;
+			e.preventDefault();
 		});
 
-		$('.read-more-hide').on('click', function(e) {
-		  $(this).parent('.completo').addClass('hide').parent().children('.read-more-show').removeClass('hide');
-		  e.preventDefault();
+		$('.read-more-hide').on('click', function(e){
+			  $(this).parent('span.completo').addClass('hide').parent().children('.read-more-show').removeClass('hide');
+ 			 return false;
+ 			 e.preventDefault();
 		});
+
 	});
 
-	$(document).ready(function() {
-	  $("#acordion section h3").click(function(e) {
-	    $(this).parents().siblings("section").addClass("ac_hidden");
-	    $(this).parents("section").removeClass("ac_hidden");
-
-	    e.preventDefault();
-	  });
-	});
 	function initMobileMenu() {
 		$('#primary-menu .menu-item-has-children').prepend('<span class="sub-trigger"></span>');
 
@@ -40,7 +35,6 @@
 	$( document ).ready( function() {
 		initMobileMenu();
 	});
- 
  // Scroll Icon 
 
 	$(document).ready(function(){
@@ -58,6 +52,14 @@
 					}
 			});
 	});
+function toggleChevron(e) {
+    $(e.target)
+        .prev('.panel-heading')
+        .find("i.indicator")
+        .toggleClass('glyphicon-chevron-down glyphicon-chevron-up');
+}
+$('#accordion').on('hidden.bs.collapse', toggleChevron);
+$('#accordion').on('shown.bs.collapse', toggleChevron);
 
 	$(function(){
 
@@ -90,5 +92,6 @@
 	$(window).resize();
 	 
 	});
+
 
 })( jQuery );

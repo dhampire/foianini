@@ -17,7 +17,7 @@
 
 <div class="row">
     <div class="col-xs-12 col-md-12 contenedor-noticias">
-            <?php $the_query = new WP_Query( 'posts_per_page=3' ); ?>`
+            <?php $the_query = new WP_Query( 'cat=1&showposts=3' ); ?>
             <?php while ($the_query -> have_posts()) : $the_query -> the_post(); ?>
 
                 <article class="noticias" id="post-<?php the_ID; ?>">
@@ -42,7 +42,7 @@
 <div class="row">
     <div id="banner">
         <div class="col-xs-12 col-md-6 col-lg-6 frase">
-            <h3>Nueva Clínica Foiniani. Sin ir más lejos, la clínica que todos esperábamos</h3>
+            <h3 class="banner__texto">Nueva Clínica Foiniani. Sin ir más lejos, la clínica que todos esperábamos</h3>
         </div>
         <div class="col-xs-12 col-md-6 col-lg-6 banner-video"></div>
     </div>

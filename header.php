@@ -15,7 +15,7 @@
 
 <head>
 
-	<meta charset="<?php bloginfo('charset'); ?>">
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 
 	<!-- Always force latest IE rendering engine (even in intranet) -->
 	<!--[if IE ]>
@@ -53,21 +53,19 @@
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+		
 		<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/funciones.js"></script>
 	<?php wp_head(); ?>
 
 
-	<?php wp_head(); ?>
+
 
 	</script>
 </head>
 
 <body>
 <div class="container-fluid">
-
-	<!-- not needed? up to you: http://camendesign.com/code/developpeurs_sans_frontieres -->
-	<div id="wrapper">
+<div id="wrapper">
 	<div class="row">
 		<div class="col-lg-12">
 			<div class="site-navigation" role="navigation">
@@ -79,7 +77,7 @@
 					</div>
 					<?php wp_nav_menu( array('theme_location' => 'primary', 'menu_id' => 'primary-menu') ); ?>
 			        <div class="icon__blog">
-			        	<a href="http://jlarteaga.com/foianini/blog"><span class="icon-blog"></span></a>
+			        	<a href="<?php echo esc_url( home_url( '/' ) ); ?>blog"><span class="icon-blog"></span></a>
 			        </div>
 		
 				</a>
@@ -105,9 +103,9 @@
 				</div>
 				<div class="social">
 					<a href="https://goo.gl/maps/7MXmJnAmm4s" target="_blank">
-							<span class="icon-pin"></span>
+							<span class="fa fa-map-marker pin"></span>
 					</a>
-					<a href="http://jlarteaga.com/foianini/contacto"><span class="fa fa-envelope"></span></a>
+					<a href="<?php echo esc_url( home_url( '/' ) ); ?>contacto"><span class="fa fa-envelope"></span></a>
 					
 					<a href="https://www.facebook.com/clinicafoianini/"><span class="fa fa-facebook"></span></a>
 					<a href="#"><span class="fa fa-youtube"></span></a>
