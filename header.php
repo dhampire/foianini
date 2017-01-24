@@ -52,9 +52,8 @@
 	<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-
-		
-		<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/funciones.js"></script>
+	<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/funciones.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 	<?php wp_head(); ?>
 
 

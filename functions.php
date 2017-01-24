@@ -35,17 +35,6 @@
 	add_filter( 'excerpt_more', 'wpdocs_excerpt_more' );
 	add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
 
-	// Scripts & Styles (based on twentythirteen: http://make.wordpress.org/core/tag/twentythirteen/)
-	function html5reset_scripts_styles() {
-		global $wp_styles;
-
-		// Load Comments
-		if ( is_singular() && comments_open() && get_option( 'thread_comments' ) )
-			wp_enqueue_script( 'comment-reply' );
-
-	}
-	add_action( 'wp_enqueue_scripts', 'html5reset_scripts_styles' );
-
 	// WP Title (based on twentythirteen: http://make.wordpress.org/core/tag/twentythirteen/)
 	function html5reset_wp_title( $title, $sep ) {
 		global $paged, $page;
@@ -70,8 +59,6 @@
 	add_filter( 'wp_title', 'html5reset_wp_title', 10, 2 );
 
 
-
-add_action( 'wp_enqueue_scripts', 'funciones' );
 function funciones() {
     wp_enqueue_script(
         'funciones', // name your script so that you can attach other scripts and de-register, etc.
@@ -79,21 +66,12 @@ function funciones() {
     );
     wp_enqueue_script('jquery');
 }
+add_action( 'wp_enqueue_scripts', 'funciones' );
 
 //OLD STUFF BELOW
 
 
-	// Load jQuery
-	if ( !function_exists( 'core_mods' ) ) {
-		function core_mods() {
-			if ( !is_admin() ) {
-				wp_deregister_script( 'jquery' );
-				wp_register_script( 'jquery', ( "http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js" ), false);
-				wp_enqueue_script( 'jquery' );
-			}
-		}
-		add_action( 'wp_enqueue_scripts', 'core_mods' );
-	}
+
 
 	// Clean up the <head>, if you so desire.
 	//	function removeHeadLinks() {
@@ -378,4 +356,14 @@ function custom_breadcrumbs() {
     }
        
 }
+
+function buscarconphp ($atts) { 
+  global $content;
+   ob_start();   
+  include ( TEMPLATEPATH .'/script_buscar.php');
+  $output = ob_get_clean();
+    return $output;
+ }
+add_shortcode ('codigophp', 'buscarconphp');
+
 ?>
