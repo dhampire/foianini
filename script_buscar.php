@@ -31,13 +31,14 @@
         $n_campo1='nombre';   // nombre de columna a visualizar en primer lugar de la tabla
         $n_campo2='especialidad';    // nombre de columna a visualizar en segundo lugar de la tabla
         $n_campo3='telefono';         // nombre de columna a visualizar en tercer lugar de la tabla
+        $n_campo4='resumen_curricular';
         $dbh =  new wpdb($user_db,$pass_db,$name_db,$host_db);  // Conexion con BD
         $query = "SELECT DISTINCT $select FROM $tabla" ;          // Query para llenar los options
         $buscador = $dbh->get_results( $query );                // Resultados busqueda
         $num = $dbh->get_row($query);                           // Número de resultados
       ?>
 
-      <legend>buscador </legend>
+      <legend>Profesionales Habilitados</legend>
       <form id="form" role="form" class="form-horizontal" method="post" action="">
         <div class="form-group">
           <label class="col-xs-12 col-sm-4 control-label" for="filters">Nombre: </label>
@@ -77,6 +78,7 @@
                 n_campo1 = "<?php echo $n_campo1;?>";
                 n_campo2 = "<?php echo $n_campo2;?>";
                 n_campo3 = "<?php echo $n_campo3;?>";
+                n_campo4 = "<?php echo $n_campo4;?>";
                 $('#myModal').modal('show')
                       $.post("<?php echo get_template_directory_uri(); ?>/do_search.php", {
                           c_f_1    : c_f_1,
@@ -91,6 +93,7 @@
                           n_campo1: n_campo1,
                           n_campo2: n_campo2,
                           n_campo3: n_campo3,
+                          n_campo4: n_campo4,
                       }, function(data) {
                           $("#tabla_result").html(data);
                           $('#myModal').modal('hide')

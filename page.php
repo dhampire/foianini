@@ -5,6 +5,7 @@
  * @since HTML5 Reset 2.0
  */
  get_header(); ?>
+
 	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 			
 		<article class="row post" id="post-<?php the_ID(); ?>"> 

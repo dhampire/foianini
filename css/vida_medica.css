@@ -1,0 +1,156 @@
+html, body {
+	font-size: 16px;
+	text-align: left;
+}
+
+/* Cabecera */
+.cabecera--vida--medica{
+	margin: 0;
+}
+.social--vmedica {
+	float:right;
+	padding-right: 5%;
+}
+.vcenter {
+	padding-top:20px;
+}
+.header img{
+	max-width: 150px;
+}
+
+/* VM Title*/
+.vm__back {
+	background: url(../img/vm__title.png) no-repeat;
+	height: 400px;
+	position: relative;
+}
+.vm__back__color{
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#c3e6f5+0,53cbf1+40,05abe0+100&0.5+0,0.8+100 */ /* FF3.6-15 */ /* Chrome10-25,Safari5.1-6 */
+background: -webkit-linear-gradient(rgba(195,230,245,0.5) 0%, rgba(83,203,241,0.62) 40%, rgba(5,171,224,0.8) 100%);
+background: -o-linear-gradient(rgba(195,230,245,0.5) 0%, rgba(83,203,241,0.62) 40%, rgba(5,171,224,0.8) 100%);
+background: linear-gradient(rgba(195,230,245,0.5) 0%, rgba(83,203,241,0.62) 40%, rgba(5,171,224,0.8) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#80c3e6f5', endColorstr='#cc05abe0',GradientType=0 ); /* IE6-9 */
+background-blend-mode: multiply;
+	height: 400px;
+	position: absolute;
+	width: 100%;
+}
+.vm__title {
+	bottom: 5%;
+	color: white;
+	font-size: 4rem;
+	left: 5%;
+	position: absolute;
+}
+/* Descripcion */
+.vm__box__descripcion {
+	margin: 2% 0;
+}
+.vm__descripcion{
+	background: #d9d9d9;
+	color: #002856;
+	font-size: 1.25rem;
+	line-height: 1.5;
+	padding: 3%;
+}
+/* GENERALES */
+.vm__titulos {
+	color: white;
+}
+.vm__enlaces {
+	color: white;
+	text-decoration: none;
+	-webkit-transition: all .5s;
+	   -moz-transition: all .5s;
+	    -ms-transition: all .5s;
+	     -o-transition: all .5s;
+	        transition: all .5s;
+}
+.vm__enlaces:hover {
+	color:white;
+	display: block;;
+	text-decoration: none;
+	border-bottom: 1px solid white;
+}
+.vm_icons {
+	position: absolute;
+	bottom: 20px;
+	right: 20px;
+}
+.vm__plus__articulos {
+	bottom: 30px;
+	right: 30px;
+	font-size: 2rem;
+}
+.vm__float__right{
+    right: 0;
+    top: 30%;
+}
+/* DESTACADOS*/
+.vm__destacados {
+	color: white;
+	font-size: 1.2rem;
+	height:300px;
+	padding: 15px 30px;
+	position: relative;
+}
+.vm__disertacion {
+	background-color: rgba(128, 189, 1, 1);
+}
+.vm__publicaciones {
+	background-color: rgba(26, 102, 154, 1);
+}
+.vm__eventos {
+	background-color: rgba(10, 53, 98, 1);
+}
+	.vm--titulo--evento {
+		color: #0097d6;
+		font-size: 3rem;
+		font-weight: 300;
+		line-height: 2.8rem;
+	}
+	.vm__evento__lugar {
+		font-size:1.7rem;
+	}
+	.vm__evento__fecha {
+		font-size:1.4rem;
+	}
+
+/* ARTICULOS*/
+.vm__articulo{
+	padding: 50px;	
+}
+	.vm__articulo__title{
+		color: #0097d6;
+		line-height:1rem;
+	}
+		.vm__articulo__titulo{ 
+			color: #0097d6;
+			font-size:3rem;
+		}
+		.vm__articulo__subtitulo{
+			font-size:1.3rem;
+		}
+	.vm__articulo__post {
+		margin: 5% 0;
+		color: #002856;
+	}
+
+/* resumen */
+
+.vm__resumen {
+	background: url(../img/vm__resumen.jpg) no-repeat 100%;
+}
+	.vm__destacados__titulos {
+		font-size: 3rem;
+	}
+	.vm__resumen__contenedor{
+		opacity: .8;
+		padding: 2% 0;
+	}
+	.vm__contenedor__listas {
+		font-size:1.3rem;
+		list-style: none;
+		padding:1% 0;
+		position: relative;
+	}
