@@ -25,7 +25,7 @@
 	}
 
 	function wpdocs_excerpt_more( $more ) {
-    return sprintf( '<a href="%1$s">%2$s</a>',
+    return sprintf( '<a class="mas--resumen" href="%1$s">%2$s</a>',
         get_permalink( get_the_ID() ),
         __( '[...]', 'foianini' )
     );

@@ -33,10 +33,10 @@
         echo "<table class='table table-striped'>"; // aplicar aqui esltilos para la tabla p.ej. table-condensed o style="background:red"
         echo "  <thead>";                           //cabecera de la tabla
         echo "      <tr>";
-        echo "          <th>Nombre y Apellidos</th>";        
-        echo "          <th>Especialiad</th>";
-        echo "          <th>Teléfono</th>";
-        echo "          <th>Resumen Curricular</th>";
+        echo "          <th><strong>Nombre y Apellidos<strong></th>";        
+        echo "          <th><strong>Especialiad<strong></th>";
+        echo "          <th><strong>Teléfono<strong></th>";
+        echo "          <th><strong>Resumen Curricular<strong></th>";
         echo "      </tr>";
         echo "  </thead>";
         echo "  <tbody>";

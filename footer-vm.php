@@ -22,16 +22,7 @@
           </div>  
         </div>
       </div>
-      <div class="col-xs-12 col-md-3 col-md-offset-9 col-lg-3 col-lg-offset-3">
-          <div class="logos__">
-            <a href="http://vitaliasalud.com" target="_blank">
-              <img class="logos__img" src="<?php echo get_template_directory_uri(); ?>/img/vitalia.png" alt="">
-            </a>
-            <!--a href="#">
-              <img class="logos__img" src="<?php echo get_template_directory_uri(); ?>/img/integrate.png" alt="">
-            </a-->
-          </div>
-      </div>';
+
 
 
 

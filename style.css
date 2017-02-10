@@ -384,7 +384,9 @@ height: 150px;
     padding-top: 25px;
     height: 350px;
 }
-
+.llamados {
+    margin-top: -10px !important;
+}
 .videoInstitucional iframe {
     position: absolute;
     top: 0;
@@ -1105,12 +1107,17 @@ textarea{
 .table {
     font-size:14px;
 }
+thead {
+    border-bottom: 1px solid #ddd;
+}
 .table > tbody > tr > td, .table > tbody > tr > th, .table > tfoot > tr > td, .table > tfoot > tr > th, .table > thead > tr > td, .table > thead > tr > th {
-    border-top: none;
+    border: none;
+    font-weight: 400;
     vertical-align: middle;
 }
 .table-bordered > tbody > tr > td, .table-bordered > tbody > tr > th, .table-bordered > tfoot > tr > td, .table-bordered > tfoot > tr > th, .table-bordered > thead > tr > td, .table-bordered > thead > tr > th {
-
+    border-top: none;
+    vertical-align: middle;
 }
 
 /* =WordPress Core
@@ -1546,6 +1553,7 @@ a img.aligncenter {
     }
     .resumen, .informacion {
         height: auto;
+        padding:20px 0 200px;
     }
     .resumen > .texto, .calidad > .texto, .informacion > .texto {
         font-size: 14px;
@@ -1639,23 +1647,26 @@ a img.aligncenter {
 .contenido-blog {width: 100%}
     .resumen__texto {
         background: rgba(12, 42, 82, .8);
-        padding: 5%;
-        margin: 5%;
+        /*padding: 5%;
+        margin: 5%;*/
+        padding: 0;
     }
     .resumen--especialidades {
-        background: rgba(13, 42, 82, 1) url("img/especialidades.png") no-repeat scroll center / cover;
+        /*background: rgba(13, 42, 82, 1) url("img/especialidades.png") no-repeat scroll center / cover; */
+	        background: rgba(13, 42, 82, 1) url("img/especialidades.png") no-repeat scroll center bottom / 100% auto;
+	        
         }
     .resumen--calidad {
-        background: rgba(13, 42, 82, 1) url("img/calidad.png") no-repeat scroll center / cover;
+        background: rgba(13, 42, 82, 1) url("img/calidad.png") no-repeat scroll center bottom / 100% auto;
         }
     .resumen--servicios {
-        background: rgba(13, 42, 82, 1) url("img/servicios.jpg") no-repeat scroll center/ cover ;
+        background: rgba(13, 42, 82, 1) url("img/servicios.jpg") no-repeat scroll center bottom / 100% auto;
         }
     .resumen--informacion {
-        background: rgba(13, 42, 82, 1) url("img/informacion.jpg") no-repeat scroll center/ cover;
+        background: rgba(13, 42, 82, 1) url("img/informacion.jpg") no-repeat scroll center bottom / 100% auto;
         }
     .resumen--consultorios {
-        background: rgba(13, 42, 82, 1) url("img/consultorios.jpg") no-repeat scroll center / cover ;
+        background: rgba(13, 42, 82, 1) url("img/consultorios.jpg") no-repeat scroll center bottom / 100% auto;
         }
 }
 
@@ -1671,6 +1682,13 @@ a img.aligncenter {
     body {
         text-align: left;
     }
+    .table {
+        font-size:10px;
+    }
+    .panel-body, .panel-group {
+        margin:0;
+        padding:0;
+    } 
     .noticias > .titulo {
         height: auto;
     }

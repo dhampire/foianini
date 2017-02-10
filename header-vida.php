@@ -70,18 +70,8 @@
 			</header>
 		</div>
 		<div class="col-xs-12 col-sm-12 col-lg-4 col-lg-offset-5 vcenter">
-				<div class="social social--vmedica">
-					<a href="https://goo.gl/maps/7MXmJnAmm4s" target="_blank">
-							<span class="fa fa-map-marker pin"></span>
-					</a>
-					<a href="<?php echo esc_url( home_url( '/' ) ); ?>contacto"><span class="fa fa-envelope"></span></a>
-					
-					<a href="https://www.facebook.com/clinicafoianini/"><span class="fa fa-facebook"></span></a>
-					<a href="#"><span class="fa fa-youtube"></span></a>
-					<form id="search" role="search" method="get" action="<?php echo home_url( '/' ); ?>">
-					        <div id="label"><label for="s" id="search-label">Buscar</label></div>
-					        <div id="input"><input type="text" name="s" id="search-terms" placeholder="Buscar..."></div>
-					</form>
+				<div class="social--vmedica">
+					<a href="mailto:vidamedica@clinicafoianini.com"><span class="fa fa-envelope"></span> vidamedica@clinicafoianini.com</a>
 				</div>
 		</div>
 	</div>
