@@ -408,7 +408,7 @@ height: 150px;
 }
 .youtube {
 	position:relative;
-	padding-bottom:56.25%;
+	padding-bottom:36.25%;
 	padding-top:30px;
 	height:0;
 	overflow:hidden;
@@ -417,8 +417,9 @@ height: 150px;
 .youtube iframe, .youtube object, .youtube embed {
 	position:absolute;
 	top:0;
-	left:0;
-	width:100%;
+	left:10%;
+    padding-bottom:3%;
+	width:70%;
 	height:100%;
 }
 /* footer */
@@ -1107,6 +1108,9 @@ textarea{
 .table {
     font-size:14px;
 }
+.table-bordered {
+    border: none;    
+}
 thead {
     border-bottom: 1px solid #ddd;
 }
@@ -1668,6 +1672,22 @@ a img.aligncenter {
     .resumen--consultorios {
         background: rgba(13, 42, 82, 1) url("img/consultorios.jpg") no-repeat scroll center bottom / 100% auto;
         }
+
+    .youtube {
+    position:relative;
+    padding-bottom:56.25%;
+    padding-top:30px;
+    height:0;
+    overflow:hidden;
+}
+
+.youtube iframe, .youtube object, .youtube embed {
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+}
 }
 
 @media screen and (max-width: 736px) {
@@ -1714,4 +1734,5 @@ a img.aligncenter {
         font-size: 50px;
         width: 100%;
     }
+
 }
