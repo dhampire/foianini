@@ -53,6 +53,7 @@
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 	<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/funciones.js"></script>
+	<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/buscador.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 	<?php wp_head(); ?>
 
@@ -100,20 +101,25 @@
 						</span>
 					</a>
 				</div>
-				<div class="social">
+				<div id="social" class="social">
 					<a href="https://goo.gl/maps/7MXmJnAmm4s" target="_blank">
 							<span class="fa fa-map-marker pin"></span>
 					</a>
 					<a href="<?php echo esc_url( home_url( '/' ) ); ?>contacto"><span class="fa fa-envelope"></span></a>
 					
 					<a href="https://www.facebook.com/clinicafoianini/"><span class="fa fa-facebook"></span></a>
-					<a href="#"><span class="fa fa-youtube"></span></a>
-					<form id="search" role="search" method="get" action="<?php echo home_url( '/' ); ?>">
-					        <div id="label"><label for="s" id="search-label">Buscar</label></div>
-					        <div id="input"><input type="text" name="s" id="search-terms" placeholder="Buscar..."></div>
-					</form>
+					<a href="https://www.youtube.com/channel/UCJtruAQzTawX2nRC7Y7UoXg"><span class="fa fa-youtube"></span></a>
+					<a href="#" id="searchtoggl"><i class="fa fa-search"></i></a>
+					
 				</div>
-		</div>
+					<div id="searchbar" class="clearfix">
+						<form id="searchform" role="search" method="get" action="<?php echo home_url( '/' ); ?>">
+							<button type="submit" id="searchsubmit" class="fa fa-search fa-3x"></button>
+						    <input type="text" name="s" id="s" placeholder="Buscar...">
+						</form>
+					</div>
+		  
+	</div>
 	</div>
 	<main class="main">
 

@@ -187,32 +187,7 @@ img {
     padding-right: 40px;
     border-right: solid 1px #5C95CD;
 }
-#buscador {
-    float: left;
-    text-align: right;
-    width: 60%;
-}
 
-#buscador input[type="text"] {
-    background: #C3C4BE;
-    border: medium none;
-    border-radius: 3px;
-    color: #555;
-    display: inline-block;
-    outline: medium none;
-    padding: 5px 10px;
-
-    width: 80%;
-}
-#buscador input[type="submit"] {
-    border: medium none;
-    cursor: pointer;
-    display: inline-block;
-    height: 24px;
-    margin-left: 10px; 
-    width: 24px;
-
-}
 
 .site-navigation {
     background: #5C95CD;
@@ -428,10 +403,6 @@ height: 150px;
 }
 /* Clases fuentes */
 
-
-.icon-buscar:before {
-  content: "\e90c";
-}
 
 .icon-descargar:before {
   content: "\e904";
@@ -671,12 +642,6 @@ height: 150px;
 .tablas__consultorios {
     text-transform: capitalize;
 }
-.informacion {
-    height: 330px;
-    overflow: hidden;
-    width: 100%;
-}
-
     .imagen__margintop {
         margin-top: 20px;
     }
@@ -943,58 +908,6 @@ font-size: 14px
 .accordion-toggle {
     padding-left:10px;
 }
-#acordion section, #acordion .pointer, #acordion h1, #acordion p {
-  -webkit-transition: all 0.25s ease-in-out;
-  -moz-transition: all 0.25s ease-in-out;
-  -ms-transition: all 0.25s ease-in-out;
-  transition: all 0.25s ease-in-out;
-}
-#acordion {
-  margin-bottom:30px;
-}
-#acordion h3 {
-  line-height:1.2;
-  font-size:14px;
-  margin:0;
-  padding: 5px 0 10px;
-}
-
-#acordion h3 a {
-  color:#8eb552;
-  display: block;
-  text-decoration: none;
-}
-#acordion section {
-  overflow:hidden;
-  height:auto;
-}
-#acordion ul {
-  padding:0 0 0 100px;
-}
-#acordion section.ac_hidden p:not(.pointer) {
-  color:#fff;
-}
-
-#acordion section.ac_hidden {
-  height:30px;
-}
-#acordion .pointer {
-  padding-right:10px;
-    font-size: 12px;
-}
-#acordion section:not(.ac_hidden) h1 {
-  background-color:rgba(132, 203, 112, 0.7);
-}
-
-#acordion section:not(.ac_hidden) .pointer {
-  display: inline-block;
-  -webkit-transform:rotate(90deg);
-  -moz-transform:rotate(90deg);
-  -o-transform:rotate(90deg);
-  transform:rotate(90deg);
-  padding-right:20px;
-
-}
 
 input[type="text"], input[type="email"]{
     border: 1px solid #84CB70;
@@ -1017,84 +930,50 @@ textarea{
      -o-transition: all .25s;
         transition: all .25s;
 }
+/* BUSCADOR */
+#searchbar {
+  display: none;
+  width: 80%;
+  height: 62px;
+  border-top: 1px solid #d8d8d8;
+  padding-left: 25px;
+  padding-right: 10px;
+  position: absolute;
+  margin-top: 10px;
+  top: 100%;
+  z-index: 9999;
+  background: #fff;
+  -webkit-box-shadow: -1px 2px 2px rgba(0,0,0,0.2);
+  -moz-box-shadow: -1px 2px 2px rgba(0,0,0,0.2);
+  box-shadow: -1px 2px 2px rgba(0,0,0,0.2);
+}
 
-#search {
-    display: inline-block;
-    position: relative;
-    width: 24px;
-    height: 24px;
-    vertical-align: top;
+#s {
+  display: block;
+  width: 68%;
+  border: 0;
+  outline: none;
+  padding: 0;
+  height: 60px;
+  line-height: 60px;
+  font-size: 2.0em;
+  font-weight: bold;
+  color: #676767;
 }
-#label {
-    width: 32px;
-    height: 32px;
-    position: relative;
-    z-index: 20;
+
+#searchsubmit {
+  display: block;
+  float: right;
+  margin-top: 6px;
+  background: none;
+  color: #5c95cd;
+  border: 0;
+  outline: none;
+  cursor: pointer;
 }
-#label label {
-    display: block;
-    width: 32px;
-    height: 32px;
-    background: url("img/search-copy.png") 0 0;
-    font-size: 0;
-    color: rgba(0, 0, 0, 0);
-    text-indent: -9999px;
-    cursor: pointer;
-}
-#label label:hover {
-    background: url("img/search-copy.png") -32px 0
-}
-#label.active label {
-    background: url("img/search-copy.png") -32px 0
-}
-#input {
-    position: absolute;
-    top: 0;
-    left: -200px;
-    width: 195px;
-    height: 32px;
-    overflow: hidden;
-}
-#input input {
-    border:1px solid #5C95CD;
-    border-radius: 5px;
-    display: block;
-    position: absolute;
-    top: 0;
-    left: -200px;
-    width: 195px;
-    height: 100%;
-    margin: 0;
-    padding: 0 10px;
-    background-color: white;
-    color: #5C95CD;
-    font-size: 18px;
-    -webkit-backface-visibility: none;
-    -moz-backface-visibility: none;
-    -ms-backface-visibility: none;
-    backface-visibility: none;
-    -webkit-border-radius: 0;
-    -moz-border-radius: 0;
-    -webkit-transition: left 0;
-    -moz-transition: left 0;
-    -ms-transition: left 0;
-    -o-transition: left 0;
-    transition: left 0;
-}
-#input input:focus {
-    outline: none
-}
-#input.focus {
-    z-index: 20
-}
-#input.focus input {
-    left: 0;
-    -webkit-transition: left 0.3s;
-    -moz-transition: left 0.3s;
-    -ms-transition: left 0.3s;
-    -o-transition: left 0.3s;
-    transition: left 0.3s;
-}
+
+/* GENERALES - BOOTSTRAP*/
+
 .btn-title {
     border-radius: 5px;
     color: #8EB552;
@@ -1118,10 +997,12 @@ thead {
     border: none;
     font-weight: 400;
     vertical-align: middle;
+    white-space: normal !important;
 }
 .table-bordered > tbody > tr > td, .table-bordered > tbody > tr > th, .table-bordered > tfoot > tr > td, .table-bordered > tfoot > tr > th, .table-bordered > thead > tr > td, .table-bordered > thead > tr > th {
     border-top: none;
     vertical-align: middle;
+    white-space: normal !important;
 }
 
 /* =WordPress Core
@@ -1296,12 +1177,6 @@ a img.aligncenter {
         text-align: left;
         margin: 20px 0;
      }
-    .informacion {
-        height: 300px;
-    }
-    .resumen > .texto, .calidad > .texto, .informacion > .texto {
-        font-size: 16px;
-    }
     .site-navigation {
         position: fixed;
         z-index: 100;
@@ -1496,7 +1371,6 @@ a img.aligncenter {
         text-align: center;
         width: 100%;
     }
-    #buscador {display: none;}
     #valores img {
         display: block;
         float: none !important;
@@ -1545,7 +1419,7 @@ a img.aligncenter {
     }
     .valores {width: auto;}
     .valores-img {padding-bottom: 30px}
-    .directores, .resumen .especialidades, .contenido, .informacion .informacion-imagen {
+    .directores {
         width: 100%;
     }
     .directores .alignright, .directores .alignleft {
@@ -1554,14 +1428,6 @@ a img.aligncenter {
     }
     .directores img{
         text-align: center;
-    }
-    .resumen, .informacion {
-        height: auto;
-        padding:20px 0 200px;
-    }
-    .resumen > .texto, .calidad > .texto, .informacion > .texto {
-        font-size: 14px;
-        width: 90%;
     }
     .calidad .img{
         height: 250px;
@@ -1651,28 +1517,7 @@ a img.aligncenter {
 .contenido-blog {width: 100%}
     .resumen__texto {
         background: rgba(12, 42, 82, .8);
-        /*padding: 5%;
-        margin: 5%;*/
-        padding: 0;
     }
-    .resumen--especialidades {
-        /*background: rgba(13, 42, 82, 1) url("img/especialidades.png") no-repeat scroll center / cover; */
-	        background: rgba(13, 42, 82, 1) url("img/especialidades.png") no-repeat scroll center bottom / 100% auto;
-	        
-        }
-    .resumen--calidad {
-        background: rgba(13, 42, 82, 1) url("img/calidad.png") no-repeat scroll center bottom / 100% auto;
-        }
-    .resumen--servicios {
-        background: rgba(13, 42, 82, 1) url("img/servicios.jpg") no-repeat scroll center bottom / 100% auto;
-        }
-    .resumen--informacion {
-        background: rgba(13, 42, 82, 1) url("img/informacion.jpg") no-repeat scroll center bottom / 100% auto;
-        }
-    .resumen--consultorios {
-        background: rgba(13, 42, 82, 1) url("img/consultorios.jpg") no-repeat scroll center bottom / 100% auto;
-        }
-
     .youtube {
     position:relative;
     padding-bottom:56.25%;
@@ -1688,6 +1533,29 @@ a img.aligncenter {
     width:100%;
     height:100%;
 }
+    #searchbar {
+        float: left;
+        margin-left: 10%;
+        position: inherit;
+    }
+    .resumen__texto {
+        margin-top: 3%;
+    }
+    .resumen--especialidades {
+        background: rgba(13, 42, 82, 1) url("img/especialidades.png") no-repeat scroll right top / cover;
+    }
+    .resumen--calidad {
+        background: rgba(13, 42, 82, 1) url("img/calidad.png") no-repeat scroll right top / cover;
+    }
+    .resumen--servicios {
+        background: rgba(13, 42, 82, 1) url("img/servicios.jpg") no-repeat scroll right top / cover ;
+    }
+    .resumen--informacion {
+        background: rgba(13, 42, 82, 1) url("img/informacion.jpg") no-repeat scroll right center/ cover ;
+    }
+    .resumen--consultorios {
+        background: rgba(13, 42, 82, 1) url("img/consultorios.jpg") no-repeat scroll right top / cover  ;
+    }
 }
 
 @media screen and (max-width: 736px) {
@@ -1734,5 +1602,27 @@ a img.aligncenter {
         font-size: 50px;
         width: 100%;
     }
-
+        .resumen {
+        height: auto;
+        padding:20px 0 200px;
+    }
+    .resumen--especialidades {
+            background: rgba(13, 42, 82, 1) url("img/especialidades.png") no-repeat scroll center bottom / 100% auto;
+            
+        }
+    .resumen--calidad {
+        background: rgba(13, 42, 82, 1) url("img/calidad.png") no-repeat scroll center bottom / 100% auto;
+        }
+    .resumen--servicios {
+        background: rgba(13, 42, 82, 1) url("img/servicios.jpg") no-repeat scroll center bottom / 100% auto;
+        }
+    .resumen--informacion {
+        background: rgba(13, 42, 82, 1) url("img/informacion.jpg") no-repeat scroll center bottom / 100% auto;
+        }
+    .resumen--consultorios {
+        background: rgba(13, 42, 82, 1) url("img/consultorios.jpg") no-repeat scroll center bottom / 100% auto;
+        }
+    .resumen__texto {
+        padding: 0;
+    }
 }

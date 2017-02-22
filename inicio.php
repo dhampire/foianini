@@ -42,7 +42,7 @@
 <div class="row">
     <div id="banner">
         <div class="col-xs-12 col-md-6 col-lg-6 frase">
-            <h3 class="banner__texto">Nueva Clínica Foiniani. Sin ir más lejos, la clínica que todos esperábamos</h3>
+            <h3 class="banner__texto">Nueva Clínica Foianini. Sin ir más lejos, la clínica que todos esperábamos</h3>
         </div>
         <div class="col-xs-12 col-md-6 col-lg-6 banner-video"></div>
     </div>

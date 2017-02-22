@@ -62,11 +62,12 @@
           <div class="button-group col-xs-5 col-xs-offset-3 col-sm-2 col-sm-offset-8">
             <button id="btn_submit" class="btn btn-primary" value="search" name="Buscar" type="button">Buscar</button>
           </div>
+            <small class="col-xs-12"><i>*Para iniciar la búsqueda haga clic en buscar y no presione enter</i></small>
       </form>
         <script type="text/javascript">
           $(document).ready(function(){
             $('#btn_submit').click(function(){
-                c_f_1= "<?php echo $c_f_1;?>"; // nombre de la columna de filtrado1
+                c_f_1= "<?php echo $c_f_1;?>"; // noe de la columna de filtrado1
                 filtro_1 = $('#filtro1').val(); //valor de filtrado1
                 c_f_2= "<?php echo $c_f_2;?>"; // nombre de la columna de filtrado2
                 filtro_2 = $('#filtro2').val(); //valor de filtrado2

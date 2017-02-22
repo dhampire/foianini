@@ -68,6 +68,15 @@ function funciones() {
 }
 add_action( 'wp_enqueue_scripts', 'funciones' );
 
+function buscador() {
+    wp_enqueue_script(
+        'buscador', // name your script so that you can attach other scripts and de-register, etc.
+        get_template_directory_uri() . '/js/buscador.js', array('jquery'), true // this array lists the scripts upon which your script depends
+    );
+    wp_enqueue_script('jquery');
+}
+add_action( 'wp_enqueue_scripts', 'buscador' );
+
 //OLD STUFF BELOW
 
 
