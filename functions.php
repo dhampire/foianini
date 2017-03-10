@@ -10,7 +10,6 @@
 	function html5reset_setup() {
 		load_theme_textdomain( 'html5reset', get_template_directory() . '/languages' );
 		add_theme_support( 'automatic-feed-links' );
-		add_theme_support( 'structured-post-formats', array( 'link', 'video' ) );
 		register_nav_menu( 'primary', __( 'Principal', 'foianini' ) );
 		register_nav_menu( 'footer', __( 'Footer', 'foianini' ) );
 		add_theme_support( 'post-thumbnails' );
@@ -18,6 +17,13 @@
 		add_image_size( 'blog-thumb', 800, 280, true );
 	}
 	add_action( 'after_setup_theme', 'html5reset_setup' );
+    // Post Format
+
+    function add_post_formats() {
+    add_theme_support( 'post-formats', array( 'gallery', 'video', 'image' ) );
+    }
+ 
+    add_action( 'after_setup_theme', 'add_post_formats', 20 );
 
 	// LEER MAS
 	function custom_excerpt_length( $length ) {
@@ -41,6 +47,7 @@
 
 		if ( is_feed() )
 			return $title;
+
 
 //		 Add the site name.
 		$title .= get_bloginfo( 'name' );
@@ -104,6 +111,15 @@ add_action( 'wp_enqueue_scripts', 'buscador' );
 		}
 		add_action( 'widgets_init', 'html5reset_widgets_init' );
 	}
+    
+    function fuera_indice( $query ) {
+        if ( $query->is_year() ) {
+        $query->set( 'cat', '-24, -25, -26' );
+        }
+        return $query;
+        }
+        add_filter( 'pre_get_posts', 'fuera_indice' );
+
 
 	// Navigation - update coming from twentythirteen
 	function post_navigation() {

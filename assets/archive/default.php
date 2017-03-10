@@ -30,8 +30,7 @@
 				<strong><?php _e('Articulos de','html5reset'); ?></strong> <?php the_time('F, Y'); ?>
 
 			<?php /* If this is a yearly archive */ } elseif (is_year()) { ?>
-				<strong>class="pagetitle"><?php _e('Articulos de','html5reset'); ?></strong> <?php the_time('Y'); ?></h2>
-
+				<strong class="pagetitle"><?php _e('Articulos de','html5reset'); ?></strong> <?php the_time('Y'); ?></h2>
 			<?php /* If this is an author archive */ } elseif (is_author()) { ?>
 				<strong>class="pagetitle"><?php _e('Articulos de Autor','html5reset'); ?></strong>
 

@@ -55,7 +55,7 @@
             echo "          <th>$res1</th>";
             echo "          <th>$res2</th>";
             echo "          <th>$res3</th>";
-            echo "          <th><button type='button' class='btn btn-info btn-lg' data-toggle='modal' data-target='#BUSCADIR".$modal__enlace."'><span class='fa fa-graduation-cap'></span></button><div class='modal fade' id='BUSCADIR".$modal__enlace."' role='dialog'><div class='modal-dialog'><div class='modal-content'><div class='modal-header'><button type='button' class='close' data-dismiss='modal'>&times;</button><h4 class='modal-title'>".$res1."</h4></div><div class='modal-body'><p>".$res4."</p></div><div class='modal-footer'><button type='button' class='btn btn-default' data-dismiss='modal'>Cerrar</button></div></div></div></div></th>";
+            echo "          <th><button type='button' class='btn btn-info btn-lg' data-toggle='modal' data-target='#BUSCADOR".$modal__enlace."'><span class='fa fa-graduation-cap'></span></button><div class='modal fade' id='BUSCADIR".$modal__enlace."' role='dialog'><div class='modal-dialog'><div class='modal-content'><div class='modal-header'><button type='button' class='close' data-dismiss='modal'>&times;</button><h4 class='modal-title'>".$res1."</h4></div><div class='modal-body'><p>".$res4."</p></div><div class='modal-footer'><button type='button' class='btn btn-default' data-dismiss='modal'>Cerrar</button></div></div></div></div></th>";
             echo "      </tr>";
         }
         echo "  </tbody>";

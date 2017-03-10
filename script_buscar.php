@@ -33,7 +33,7 @@
         $n_campo3='telefono';         // nombre de columna a visualizar en tercer lugar de la tabla
         $n_campo4='resumen_curricular';
         $dbh =  new wpdb($user_db,$pass_db,$name_db,$host_db);  // Conexion con BD
-        $query = "SELECT DISTINCT $select FROM $tabla" ;          // Query para llenar los options
+        $query = "SELECT DISTINCT $select FROM $tabla ORDER by $select" ;          // Query para llenar los options
         $buscador = $dbh->get_results( $query );                // Resultados busqueda
         $num = $dbh->get_row($query);                           // Número de resultados
       ?>

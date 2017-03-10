@@ -14,33 +14,12 @@
 <div class="row">
 	<div class="col-xs-12 col-md-10 col-md-offset-1" id="contenedor">
 		<div class="col-xs-12 col-md-9">
-			<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-				<article class="blog" id="post-<?php the_ID(); ?>">
-					<div class="post-footer">	
-						<?php posted_on(); ?>
-					</div>
-					<a href="<?php the_permalink() ?>"><?php the_post_thumbnail('blog-thumb'); ?></a>
-					<div class="emcabezado">
-    					<!--p class="texto-intro"><?php echo get_post_meta($post->ID, 'Resumen', true)?></p -->
-    					<p>
-						<strong>
-							<a class="blog__subtitulo" href="<?php the_permalink() ?>">
-								<?php echo get_post_meta($post->ID, 'Subtitulo', true); ?>
-
-							</a>
-						</strong>
-					</p>
-					</div>
-						<!--h2><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h2-->
-						<div class="entry">
-							<?php  the_content('Ver más...'); ?>
-						</div>
-				</article>
+			<?php if (have_posts()) : while (have_posts()) : the_post(); 
+				get_template_part('content', get_post_format());
+			?>
 
 			<?php endwhile; ?>
-
-			<?php post_navigation(); ?>
-
+					<?php post_navigation(); ?>
 			<?php else : ?>
 
 				<h2><?php _e('Nothing Found','html5reset'); ?></h2>
