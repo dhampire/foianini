@@ -101,16 +101,18 @@
 						</span>
 					</a>
 				</div>
-				<div id="social" class="social">
+				<div id="sociales" class="sociales">
 					<a href="https://goo.gl/maps/7MXmJnAmm4s" target="_blank">
 							<span class="fa fa-map-marker pin"></span>
 					</a>
 					<a href="<?php echo esc_url( home_url( '/' ) ); ?>contacto"><span class="fa fa-envelope"></span></a>
 					
-					<a href="https://www.facebook.com/clinicafoianini/"><span class="fa fa-facebook"></span></a>
-					<a href="https://www.youtube.com/channel/UCJtruAQzTawX2nRC7Y7UoXg"><span class="fa fa-youtube"></span></a>
-					<a href="#" id="searchtoggl"><i class="fa fa-search"></i></a>
-					
+					<a target="_blank" href="https://www.facebook.com/clinicafoianini/"><span class="fa fa-facebook"></span></a>
+					<a href="https://www.youtube.com/channel/UCJtruAQzTawX2nRC7Y7UoXg" target="_blank"><span class="fa fa-youtube"></span></a>
+					<div id="buscador-social" class="buscador-social">
+						<a href="#" id="searchtoggl"><i class="fa fa-search"></i></a>
+					</div>
+
 				</div>
 					<div id="searchbar" class="clearfix">
 						<form id="searchform" role="search" method="get" action="<?php echo home_url( '/' ); ?>">

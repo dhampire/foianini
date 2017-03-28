@@ -162,10 +162,10 @@ img {
     line-height: 0.1em;
     width: 130px;
     }
-.social {
+.sociales {
     float: left;
 }
-.social a{
+.sociales a{
     color: #5C95CD;
     display: inline-block;
     font-size: 24px;
@@ -183,11 +183,14 @@ img {
          -o-transition: all .25s;
             transition: all .25s;
 }
-.social a:nth-child(2) {
+.sociales a:nth-child(2) {
     padding-right: 40px;
     border-right: solid 1px #5C95CD;
 }
-
+.buscador-social {
+    display: inline-block;
+    width: 36px;
+}
 
 .site-navigation {
     background: #5C95CD;
@@ -1170,7 +1173,7 @@ a img.aligncenter {
             margin: 0 auto;
             width: 180px
         }
-        .social {
+        .sociales {
             margin:20px 0;
             width:100%;
             text-align:center;
@@ -1478,7 +1481,7 @@ a img.aligncenter {
         width: 100%;
     }
 
-    .social {
+    .sociales {
         margin: 30px 0;
         text-align: center;
         width: 100%;

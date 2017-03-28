@@ -2,7 +2,7 @@ $(document).ready(function(){
   var $searchlink = $('#searchtoggl i');
   var $searchbar  = $('#searchbar');
   
-  $('#social a').on('click', function(e){
+  $('#buscador-social a').on('click', function(e){
     e.preventDefault();
     
     if($(this).attr('id') == 'searchtoggl') {
